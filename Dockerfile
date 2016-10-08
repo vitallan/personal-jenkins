@@ -13,7 +13,7 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 581
 RUN wget https://deb.nodesource.com/setup_6.x
 RUN bash setup_6.x
 
-RUN apt-get update && apt-get install -y maven docker-engine nodejs
+RUN apt-get update && apt-get install -y maven docker-engine nodejs sshpass
 RUN wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
 RUN dpkg -i hugo_0.17-64bit.deb
 RUN npm install -g yo
@@ -22,5 +22,4 @@ RUN npm install -g gulp-cli
 RUN npm install -g generator-jhipster
 
 VOLUME ["/var/run/docker.sock"]
-
 
